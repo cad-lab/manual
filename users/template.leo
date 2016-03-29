@@ -12,15 +12,11 @@
 <vnodes>
 <v t="amd.20160329124757.1"><vh>跳出 users 目錄</vh></v>
 <v t="amd.20160329124554.2" a="E"><vh>@path ./../</vh>
-<v t="amd.20160329163710.1"><vh>假如要送到 gh-pages 分支, 使用下列按鈕</vh>
-<v t="amd.20160329163710.2"><vh>@button gh-pages pelican</vh></v>
-</v>
 <v t="amd.20160329163719.1" a="E"><vh>假如要在近端檢視, 使用下列按鈕</vh>
 <v t="amd.20160329163719.2"><vh>@button local pelican</vh></v>
 </v>
 <v t="amd.20160329162138.1"><vh>設定檔案</vh></v>
 <v t="amd.20160329163958.1"><vh>@edit pelicanconf.py</vh></v>
-<v t="amd.20160329162938.1"><vh>@edit publishconf.py</vh></v>
 <v t="amd.20160329162950.1"><vh>@edit local_publishconf.py</vh></v>
 <v t="amd.20160329124921.1"><vh>@edit index.html</vh></v>
 <v t="amd.20160329124849.1"><vh>進入 content 目錄</vh></v>
@@ -46,13 +42,6 @@ Author: kmol
 
 &lt;a href="http://cad-lab.github.io/manual"&gt;http://cad-lab.github.io/manual&lt;/a&gt;</t>
 <t tx="amd.20160329162138.1"></t>
-<t tx="amd.20160329163710.1"></t>
-<t tx="amd.20160329163710.2">@language python
-import os
-os.system("pelican content -o post -s publishconf.py")
-g.es("admin pelican 執行完畢")
-
-</t>
 <t tx="amd.20160329163719.1"></t>
 <t tx="amd.20160329163719.2">@language python
 import os
