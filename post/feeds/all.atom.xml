@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CADLab 手冊 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2016-03-29T16:35:37+08:00</updated><entry><title>template-啟動電腦輔助機械設計手冊編輯</title><link href="./template-qi-dong-dian-nao-fu-zhu-ji-jie-she-ji-shou-ce-bian-ji.html" rel="alternate"></link><updated>2016-03-29T16:35:37+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-29:./template-qi-dong-dian-nao-fu-zhu-ji-jie-she-ji-shou-ce-bian-ji.html</id><summary type="html">&lt;p&gt;手冊類別分為 OnShape, Solvespace, FreeCAD, Elmer, V-rep 以及 Jupyter, 加上範例, 編寫模式與架構則透過 Leo Editor, Pelican,  與 Github pull requests 完成.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href="http://cad-lab.github.io/manual"&gt;http://cad-lab.github.io/manual&lt;/a&gt;&lt;/p&gt;</summary><category term="CADLAB"></category><category term="Ｍanual"></category><category term="MCAD"></category></entry></feed>
