@@ -178,7 +178,7 @@ init_mathjax();
         <meta property="og:url" content="http://cad-lab.github.io/manual/post/template-qi-dong-dian-nao-fu-zhu-ji-jie-she-ji-shou-ce-bian-ji.html"/>
         <meta property="og:description" content="手冊類別分為 OnShape, Solvespace, FreeCAD, Elmer, V-rep 以及 Jupyter, 加上範例, 編寫模式與架構則透過 Leo Editor, Pelican, 與 Github pull requests 完成."/>
         <meta property="article:published_time" content="2016-03-29" />
-            <meta property="article:section" content="規劃" />
+            <meta property="article:section" content="MISC" />
             <meta property="article:tag" content="CADLAB" />
             <meta property="article:tag" content="Ｍanual" />
             <meta property="article:tag" content="MCAD" />
@@ -259,8 +259,17 @@ CADLab 手冊 (虎尾科大MDE)            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
+                         <li><a href="http://cad-lab.github.io/manual/post/pages/about/">
+                             About
+                          </a></li>
+                        <li >
+                            <a href="http://cad-lab.github.io/manual/post/category/cherrypy.html">Cherrypy</a>
+                        </li>
                         <li class="active">
-                            <a href="http://cad-lab.github.io/manual/post/category/gui-hua.html">規劃</a>
+                            <a href="http://cad-lab.github.io/manual/post/category/misc.html">Misc</a>
+                        </li>
+                        <li >
+                            <a href="http://cad-lab.github.io/manual/post/category/raspberrypi.html">Raspberrypi</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -298,7 +307,7 @@ CADLab 手冊 (虎尾科大MDE)            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-03-29T16:35:37.005469+08:00"> 二 29 三月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-03-29T17:36:12.501343+08:00"> 二 29 三月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://cad-lab.github.io/manual/post/author/kmol.html"><i class="fa fa-user"></i> kmol</a>
@@ -318,6 +327,19 @@ CADLab 手冊 (虎尾科大MDE)            </a>
 
 
 <p><a href="http://cad-lab.github.io/manual">http://cad-lab.github.io/manual</a></p>
+<p>文章類別將分為 onshape, solvespace, freecad, elmer, vrep, jupyter, rpi, 範例與 MISC 等.</p>
+<p>CADLab 手冊將 Pelican 設定分為本地端與 gh-pages 端的原因在於 disqus 設定, 本地端無需 disqus 討論功能, 而 gh-pages 端則需要網址全稱才能正確與 disqus 設定連結, 因此所有使用者在近端檢視時, 必須採用近端的按鈕, 而要送到遠端前則必須要用遠端按鈕產生所需要的 post 目錄下的所有資料後, 再提交推送.</p>
+<p>以下為圖片引用方法, 建議放到 files 目錄下, 並且用相對目錄引用各自放在以用戶名稱命名的子目錄中, 以避免多用戶因採相同檔名而覆寫:</p>
+<pre class="brush: python;">
+<img src="./../files/user1/github.png" />
+</pre>
+
+<p>得到結果如下:</p>
+<p><img src="./../files/user1/github.png" /></p>
+<p>如何協同編輯 CADLAb 手冊:</p>
+<ol>
+<li></li>
+</ol>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -363,6 +385,21 @@ CADLab 手冊 (虎尾科大MDE)            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="http://cad-lab.github.io/manual/post/cherrypy-shi-yong-shou-ce.html">
+                            Cherrypy 使用手冊
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://cad-lab.github.io/manual/post/jian-li-yi-ge-ke-cheng-shi-de-wu-xian-wang-lu-xie-qu-dian.html">
+                            建立一個可程式的無線網路擷取點
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://cad-lab.github.io/manual/post/user1-ce-shi-content-mu-lu-xia-de-md-dang-an-zhuan-huan.html">
+                            user1-測試 content 目錄下的 md 檔案轉換
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://cad-lab.github.io/manual/post/template-qi-dong-dian-nao-fu-zhu-ji-jie-she-ji-shou-ce-bian-ji.html">
                             template-啟動電腦輔助機械設計手冊編輯
                         </a>
@@ -373,8 +410,18 @@ CADLab 手冊 (虎尾科大MDE)            </a>
             <li class="list-group-item"><a href="http://cad-lab.github.io/manual/post/categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
                 <ul class="list-group" id="categories">
                     <li class="list-group-item">
-                        <a href="http://cad-lab.github.io/manual/post/category/gui-hua.html">
-                            <i class="fa fa-folder-open fa-lg"></i> 規劃
+                        <a href="http://cad-lab.github.io/manual/post/category/cherrypy.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Cherrypy
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://cad-lab.github.io/manual/post/category/misc.html">
+                            <i class="fa fa-folder-open fa-lg"></i> MISC
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://cad-lab.github.io/manual/post/category/raspberrypi.html">
+                            <i class="fa fa-folder-open fa-lg"></i> RaspberryPi
                         </a>
                     </li>
                 </ul>

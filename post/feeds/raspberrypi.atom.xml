@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CADLab 手冊 (虎尾科大MDE)</title><link href="http://cad-lab.github.io/manual/post/" rel="alternate"></link><link href="http://cad-lab.github.io/manual/post/feeds/raspberrypi.atom.xml" rel="self"></link><id>http://cad-lab.github.io/manual/post/</id><updated>2016-04-01T16:06:22+08:00</updated><entry><title>建立一個可程式的無線網路擷取點</title><link href="http://cad-lab.github.io/manual/post/jian-li-yi-ge-ke-cheng-shi-de-wu-xian-wang-lu-xie-qu-dian.html" rel="alternate"></link><updated>2016-04-01T16:06:22+08:00</updated><author><name>kmol</name></author><id>tag:cad-lab.github.io,2016-04-01:manual/post/jian-li-yi-ge-ke-cheng-shi-de-wu-xian-wang-lu-xie-qu-dian.html</id><summary type="html">&lt;p&gt;Raspberry Pi 3 model B 已經內建 Wifi, 因此只要安裝&lt;/p&gt;
+
+
+&lt;p&gt;hostapd – Host AccessPoint Daemon &lt;/p&gt;
+&lt;p&gt;wpa-supplicant – tool responsible for WPA authorization&lt;/p&gt;
+&lt;p&gt;isc-dhcp-server&lt;/p&gt;
+&lt;p&gt;ip-tables - router&lt;/p&gt;
+&lt;p&gt;sudo apt-get update
+sudo apt-get -y install hostapd isc-dhcp-server iptables wpa_supplicant&lt;/p&gt;
+&lt;p&gt;/etc/hostapd/hostapd.conf&lt;/p&gt;
+&lt;p&gt;/etc/dhcp/dhcpd.conf&lt;/p&gt;
+&lt;p&gt;/etc/network/interfaces&lt;/p&gt;
+&lt;p&gt;auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet static
+        address 192.134.3.1
+        netmask 255.255.255.0
+up iptables-restore &amp;lt; /etc/iptables.ipv4.nat&lt;/p&gt;
+&lt;p&gt;Let’s turn on packet forwarding in /etc/sysctl.conf by making sure that line&lt;/p&gt;
+&lt;p&gt;net.ipv4.ip_forward=1&lt;/p&gt;
+&lt;p&gt;wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf &lt;/p&gt;
+&lt;p&gt;sudo apt-get -y install bridge-utils&lt;/p&gt;
+&lt;p&gt;auto lo&lt;/p&gt;
+&lt;p&gt;iface lo inet loopback
+iface eth0 inet dhcp&lt;/p&gt;
+&lt;p&gt;auto br0
+iface br0 inet dhcp
+bridge_ports eth0 wlan0&lt;/p&gt;</summary><category term="Wifi"></category><category term="Access Point"></category><category term="Python3"></category><category term="wsgi"></category></entry></feed>
