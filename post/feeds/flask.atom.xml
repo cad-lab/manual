@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CADLab 手冊 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/flask.atom.xml" rel="self"></link><id>./</id><updated>2016-05-20T23:53:49+08:00</updated><entry><title>Flask 導引 (一)</title><link href="./flask-dao-yin-yi.html" rel="alternate"></link><updated>2016-05-20T23:53:49+08:00</updated><author><name>kmol</name></author><id>tag:,2016-05-20:./flask-dao-yin-yi.html</id><summary type="html">&lt;p&gt;&lt;a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-now-with-python-3-support"&gt;http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-now-with-python-3-support&lt;/a&gt; 是一份介紹 Flask 網際程式框架使用的導引資料.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world"&gt;Part I&lt;/a&gt; 介紹如何傳回 Hello World 字串.&lt;/p&gt;
+&lt;h2&gt;可攜程式系統&lt;/h2&gt;
+&lt;p&gt;假如在 Windows 操作系統, 建立 git clone &lt;a href="https://github.com/chiamingyen/kmol2016"&gt;https://github.com/chiamingyen/kmol2016&lt;/a&gt; 倉儲, 然後執行 start.bat 就可以啟動可攜 Python3 程式環境.&lt;/p&gt;
+&lt;p&gt;假如是在 Ubuntu 操作系統, 只要安裝 16.04 版本, 就已經內建 Python3 程式環境, 然後再使用 pip install flask, 就可以安裝 Flask 網際框架模組.&lt;/p&gt;
+&lt;h2&gt;專案倉儲目錄&lt;/h2&gt;
+&lt;p&gt;首先在 github 建立一個空的倉儲, 只先 initialize README.md 檔案, 以及 AGPL License, 以及 Python 對應的 .gitignore 等檔案, 完成後, git clone 這個空倉儲 (假設名稱為 wcmw13) 到本地端.&lt;/p&gt;
+&lt;p&gt;在 wcmw13 目錄中, 分別建立 microblog, users, 以及 tmp 子目錄. microblog 目錄下, 再建立 app 子目錄.&lt;/p&gt;
+&lt;p&gt;接下來在 users 目錄中利用 Leo Editor 建立一個 user.leo 專案檔, 之後的所有檔案建立與命令執行, 則都在 Leo Editor 環境中完成.&lt;/p&gt;
+&lt;p&gt;由於 user.leo 檔案位於 users 目錄中, 因此利用 @path 節點路徑設定指令, 以 @path ./../ 節點標題, 跳出 users 目錄.&lt;/p&gt;
+&lt;p&gt;接著就可以在此一節點的路徑下, 分別利用 @edit 節點指令, 編輯 README.md, setup.py 以及 wsgi.py 等檔案. 其中的 setup.py 是 Openshift 雲端平台上內建的環境配置檔案, 而 wsgi.py 則是內定的 wsgi 應用起始檔案.&lt;/p&gt;
+&lt;p&gt;其中, setup.py 的內容:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+# 用於 Openshift 平台的環境設定檔 setup.py
+from setuptools import setup
+
+setup(name='WCM 2016 project',
+      version='1.0',
+      description='OpenShift App',
+      author='wcm',
+      author_email='course@mde.tw',
+      url='https://www.python.org/community/sigs/current/distutils-sig',
+      install_requires=['Flask&gt;=0.10.1'],
+     )
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;wsgi.py 的內容:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+#!/usr/bin/python
+# wsgi.py 檔案
+# 導入 os 模組, 主要用來判斷是否在 OpenShift 上執行
+import os
+# 導入同目錄下的 myflaskapp.py
+from microblog.app import app
+
+# 以下開始判斷在 OpenShift 或近端執行
+if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
+    # 表示程式在雲端執行
+    application = app
+else:
+    # 表示在近端執行, 以 python3 wsgi.py 執行,  若採 uwsgi 則與 Openshift 運作模式相同
+    app.run(debug=True)
+&lt;/pre&gt;
+
+&lt;p&gt;接下來在跳出 users 之後的對應位置以 @path microblog 進入 microblog 目錄, 然後利用 @edit run.py 編輯 run.py, 其內容如下:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+#!flask/bin/python
+if __name__ == "__main__":
+    from app import app
+    app.run(debug=True)
+&lt;/pre&gt;
+
+&lt;p&gt;然後再利用 @path app 進入 app 目錄後, 分別以 @edit &lt;strong&gt;init&lt;/strong&gt;.py 與 @edit views.py 編輯 &lt;strong&gt;init&lt;/strong&gt;.py 以及 views.py 檔案.&lt;/p&gt;
+&lt;p&gt;其中, &lt;strong&gt;init&lt;/strong&gt;.py 檔案內容:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+from flask import Flask
+
+app = Flask(__name__)
+from . import views
+&lt;/pre&gt;
+
+&lt;p&gt;至於 views.py 的內容:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+from flask import render_template
+from . import app
+
+@app.route('/')
+@app.route('/index')
+def index():
+    user = {'nickname': 'Miguel'}
+    posts = [
+        {
+            'author': {'nickname': 'John'},
+            'body': 'Beautiful day in Portland!'
+        },
+        {
+            'author': {'nickname': 'Susan'},
+            'body': 'The Avengers movie was so cool!'
+        }
+    ]
+    return render_template("index.html",
+                           title='Home',
+                           user=user,
+                           posts=posts)
+&lt;/pre&gt;
+
+&lt;p&gt;最後利用 @path templates 進入 templates 目錄, 然後再以 @edit base.html 編輯 base.html, 以 @edit index.html 編輯 index.html&lt;/p&gt;
+&lt;p&gt;而 base.html 的內容:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    {% if title %}
+    &amp;lt;title&amp;gt;{{ title }} - microblog&amp;lt;/title&amp;gt;
+    {% else %}
+    &amp;lt;title&amp;gt;microblog&amp;lt;/title&amp;gt;
+    {% endif %}
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;Microblog: &amp;lt;a href="/index"&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;hr&amp;gt;
+    {% block content %}{% endblock %}
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;index.html 的內容:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+{% extends "base.html" %}
+{% block content %}
+    &amp;lt;h1&amp;gt;Hi, {{ user.nickname }}!&amp;lt;/h1&amp;gt;
+    {% for post in posts %}
+    &amp;lt;p&amp;gt;
+      {{ post.author.nickname }} says: &amp;lt;b&amp;gt;{{ post.body }}&amp;lt;/b&amp;gt;
+    &amp;lt;/p&amp;gt;
+    {% endfor %}
+{% endblock %}
+&lt;/pre&gt;</summary><category term="Python3"></category><category term="web-based"></category></entry></feed>
