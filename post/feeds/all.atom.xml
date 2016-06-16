@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>CADLab 手冊 (虎尾科大MDE)</title><link href="http://cad-lab.github.io/manual/post/" rel="alternate"></link><link href="http://cad-lab.github.io/manual/post/feeds/all.atom.xml" rel="self"></link><id>http://cad-lab.github.io/manual/post/</id><updated>2016-05-21T23:58:59+08:00</updated><entry><title>C 程式語言的指標與陣列導引 (中文翻譯)</title><link href="http://cad-lab.github.io/manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html" rel="alternate"></link><updated>2016-05-21T23:58:59+08:00</updated><author><name>kmol</name></author><id>tag:cad-lab.github.io,2016-05-21:manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html</id><summary type="html">&lt;p&gt;&lt;a href="http://pweb.netcom.com/~tjensen/ptr/pointers.htm"&gt;http://pweb.netcom.com/~tjensen/ptr/pointers.htm&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CADLab 手冊 (虎尾科大MDE)</title><link href="http://cad-lab.github.io/manual/post/" rel="alternate"></link><link href="http://cad-lab.github.io/manual/post/feeds/all.atom.xml" rel="self"></link><id>http://cad-lab.github.io/manual/post/</id><updated>2016-06-16T22:55:11+08:00</updated><entry><title>C 程式語言的指標與陣列導引 (中文翻譯)</title><link href="http://cad-lab.github.io/manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html" rel="alternate"></link><updated>2016-06-16T22:55:11+08:00</updated><author><name>kmol</name></author><id>tag:cad-lab.github.io,2016-06-16:manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html</id><summary type="html">&lt;p&gt;&lt;a href="http://pweb.netcom.com/~tjensen/ptr/pointers.htm"&gt;http://pweb.netcom.com/~tjensen/ptr/pointers.htm&lt;/a&gt;&lt;/p&gt;
 
 
 &lt;p&gt;其他參考: &lt;/p&gt;
@@ -49,6 +49,7 @@ Dec. 1995&lt;/p&gt;
     }
 &lt;/pre&gt;
 
+&lt;p&gt;&lt;a href="http://codepad.org/iQqRmLnh"&gt;在 codepad.org 執行上述 C 程式&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;當我們宣告一個變數時, 亦即告知編譯器兩件事, 變數名稱與變數型別. 例如, 可以透過&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;int k;
 &lt;/pre&gt;&lt;/div&gt;
@@ -129,6 +130,7 @@ k = j;    &amp;lt;-- line 2
     }
 &lt;/pre&gt;
 
+&lt;p&gt;&lt;a href="http://codepad.org/w8R9mp9h"&gt;在 codepad.org 執行 Program 1.1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;請注意: 我們還沒有談到 C 程式中的 (void *) 表示式. 這裡可以先納入您的測試程式碼中,  隨後將會加以說明.&lt;/p&gt;
 &lt;p&gt;結論:&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
@@ -200,6 +202,7 @@ ptr = &amp;amp;my_array[0];       /* 將指標指向陣列中的第一個整數*
     }
 &lt;/pre&gt;
 
+&lt;p&gt;&lt;a href="http://codepad.org/3fgCKs7N"&gt;在 codepad.org 執行 Program 2.1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;編譯執行上列程式就可以仔細觀察 A 行與 B 行程式分別採用兩種方法列出陣列中的同一內容.&lt;/p&gt;
 &lt;p&gt;也可以清楚看到 B 行程式如何應用"取值"運算, 亦即, 首先在指標增量後, 在新的指標中取值. 將 B 行程式改為&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;printf(&amp;quot;ptr + %d = %d\n&amp;quot;,i, *ptr++);
@@ -340,6 +343,7 @@ my_string[3] = &amp;#39;\0&amp;#39;;
 &lt;/pre&gt;
 
 &lt;p&gt;--------- end program 3.1 -------------------------------------&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://codepad.org/VohQ499U"&gt;在 codepad.org 執行 Program 3.1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;上述程式定義了兩個字元陣列, 各有 80 字元. 由於屬於全域變數, 一開始各字元都填入 '\0'. 然後, strA 前 42 個字元被放入所引用的字串內容.&lt;/p&gt;
 &lt;p&gt;接著的程式碼, 宣告兩個字元指標並將其字串顯示在螢幕. 將 pA 指標指向 strA, 也就是附註 strA[0] 的位址給變數 pA. 然後利用 puts() 函數顯示 pA 所指向的內容
  puts() 函式的宣告為:&lt;/p&gt;
@@ -483,6 +487,7 @@ int i;
     }
 &lt;/pre&gt;
 
+&lt;p&gt;&lt;a href="http://codepad.org/38P12lsx"&gt;執行上述程式&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;接著, 來看前面給的函數, 寫成:&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;dest[i] = source[i];
 &lt;/pre&gt;&lt;/div&gt;
@@ -560,6 +565,7 @@ strchr();
 &lt;/pre&gt;
 
 &lt;p&gt;-------------- end of program 5.1 --------------&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://codepad.org/yKWdNwEE"&gt;執行 Program 5.1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;或許這裏所使用的結構與一般 C 程式所使用的相比還要小, 為了驗證也可以加入:&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
@@ -642,6 +648,7 @@ Social_S_Nbr;
 &lt;/pre&gt;
 
 &lt;p&gt;-------------------- end of program 5.2 ----------------&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://codepad.org/BTNjPXRy"&gt;執行 Program 5.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;這裡要了解不少東西. 讀者必須實際執行一下上面的程式, 並且利用除錯器一步步觀察  my_struct 與 p 在主函式執行流程中, 才能實際了解函式執行的內容.&lt;/p&gt;
 &lt;h2&gt;第六章: 更多關於字串與字串陣列的用法&lt;/h2&gt;
 &lt;p&gt;接著, 再回到字串的用法. 下面的例子, 都以全域的方式運用, 亦即, 在任何函式之外發生作用, 包括主函式.&lt;/p&gt;
@@ -730,39 +737,38 @@ multi[row][col]            可得到相同的結果.
 &lt;p&gt;下列程式採用整數數列而非字元陣列來驗證這個結果:&lt;/p&gt;
 &lt;p&gt;------------------- program 6.1 ----------------------&lt;/p&gt;
 &lt;pre class="brush: c"&gt;
-    /* Program 6.1 from PTRTUT10.HTM   6/13/97*/
+#include &amp;lt;stdio.h&amp;gt;
+#define ROWS 5
+#define COLS 10
 
-    #include &amp;amp;lt;stdio.h&amp;amp;gt;
-    #define ROWS 5
-    #define COLS 10
+int multi[ROWS][COLS];
 
-    int multi[ROWS][COLS];
-
-    int main(void)
+int main(void)
+{
+    int row, col;
+    for (row = 0; row &amp;lt; ROWS; row++)
     {
-        int row, col;
-        for (row = 0; row &amp;amp;lt; ROWS; row++)
+        for (col = 0; col &amp;lt; COLS; col++)
         {
-            for (col = 0; col &amp;amp;lt; COLS; col++)
-            {
-                multi[row][col] = row*col;
-            }
+            multi[row][col] = row*col;
         }
-
-        for (row = 0; row &amp;amp;lt; ROWS; row++)
-        {
-            for (col = 0; col &amp;amp;lt; COLS; col++)
-            {
-                printf("\n%d  ",multi[row][col]);
-                printf("%d ",*(*(multi + row) + col));
-            }
-        }
-
-        return 0;
     }
+
+    for (row = 0; row &amp;lt; ROWS; row++)
+    {
+        for (col = 0; col &amp;lt; COLS; col++)
+        {
+            printf("\n%d  ",multi[row][col]);
+            printf("%d ",*(*(multi + row) + col));
+        }
+    }
+
+    return 0;
+}
 &lt;/pre&gt;
 
 &lt;p&gt;----------------- end of program 6.1 ---------------------   &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://codepad.org/flzRLrx1"&gt;執行 Program 6.1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;由於在陣列程式版本中進行了兩次交互參照取值, 二維陣列的名稱就如同指向陣列的指標. 至於三維陣列則用來處理陣列中陣列所指向的陣列, 因此也等同是指向陣列中陣列的指標. 但這裡的說明將陣列所佔記憶體區段以陣列來加以表示, 因此所處理的記憶體位址為常數而非變數. 亦即所討論的是固定的位址而非變數指標.&lt;/p&gt;
 &lt;p&gt;上述的取值函式允許從陣列中, 以無需變更位址數值的方式從陣列中取出任何數值 (例如, 以 multi[0][0]  的位址取 multi 符號所對應的值)&lt;/p&gt;
 &lt;h2&gt;CHAPTER 7: More on Multi-Dimensional Arrays&lt;/h2&gt;
@@ -963,6 +969,7 @@ Consider now:&lt;/p&gt;
 &lt;/pre&gt;
 
 &lt;p&gt;------------- End of Prog. 9.1 --------------------------------&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://codepad.org/0TrvKYko"&gt;執行 Program 9.1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Here I have assumed an ANSI compiler so a cast on the void pointer returned by malloc() is not required. If you are using an older K&amp;amp;R compiler you will have to cast using:&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;rptr = (RowArray *)malloc(.... etc.
 &lt;/pre&gt;&lt;/div&gt;
@@ -1023,6 +1030,7 @@ METHOD 3:&lt;/p&gt;
 &lt;/pre&gt;
 
 &lt;p&gt;--------------- End 9.2 ------------------------------------&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://codepad.org/fkwhY5YO"&gt;執行 Program 9.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In the above code rowptr is a pointer to pointer to type int. In this case it points to the first element of an array of pointers to type int. Consider the number of calls to malloc():&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
@@ -1128,6 +1136,7 @@ If you want to have a contiguous block of memory dedicated to the storage of the
 &lt;/pre&gt;
 
 &lt;p&gt;------------- End Program 9.3 -----------------&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://codepad.org/TfAnw9wo"&gt;執行 Program 9.3&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Consider again, the number of calls to malloc()
     To get room for the array itself      1      call
     To get room for the array of ptrs     1      call
@@ -1201,6 +1210,7 @@ If you want to have a contiguous block of memory dedicated to the storage of the
 &lt;/pre&gt;
 
 &lt;p&gt;------------------- End of Prog. 9.4 ----------------------------&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://codepad.org/hFghr4bI"&gt;執行 Program 9.4&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you have followed this tutorial up to this point you should have no problem deciphering the above on the basis of the comments alone. There are a couple of points that should be made however. Let's start with the line which reads:
     Arr3D[z][y] = space + (z&lt;em&gt;(X_DIM * Y_DIM) + y&lt;/em&gt;X_DIM);&lt;/p&gt;
 &lt;p&gt;Note that here space is a character pointer, which is the same type as Arr3D[z][y]. It is important that when adding an integer, such as that obtained by evaluation of the expression (z&lt;em&gt;(X_DIM * Y_DIM) + y&lt;/em&gt;X_DIM), to a pointer, the result is a new pointer value. And when assigning pointer values to pointer variables the data types of the value and variable must match.&lt;/p&gt;
@@ -1256,6 +1266,7 @@ If you want to have a contiguous block of memory dedicated to the storage of the
 &lt;/pre&gt;
 
 &lt;p&gt;/&lt;em&gt;---------------------- end bubble_1.c -----------------------&lt;/em&gt;/&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://codepad.org/lnLshCvk"&gt;執行 bubble_1.c&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The bubble sort is one of the simpler sorts. The algorithm scans the array from the second to the last element comparing each element with the one which precedes it. If the one that precedes it is larger than the current element, the two are swapped so the larger one is closer to the end of the array. &lt;/p&gt;
 &lt;p&gt;On the first pass, this results in the largest element ending up at the end of the array. The array is now limited to all elements except the last and the process repeated. This puts the next largest element at a point preceding the largest element. The process is repeated for a number of times equal to the number of elements minus 1. The end result is a sorted array.&lt;/p&gt;
 &lt;p&gt;Here our function is designed to sort an array of integers. Thus in line 1 we are comparing integers and in lines 2 through 4 we are using temporary integer storage to store integers. What we want to do now is see if we can convert this code so we can use any data type, i.e. not be restricted to integers.&lt;/p&gt;
@@ -1317,6 +1328,7 @@ If you want to have a contiguous block of memory dedicated to the storage of the
     /*--------------------- end of bubble_2.c -----------------------*/
 &lt;/pre&gt;
 
+&lt;p&gt;&lt;a href="http://codepad.org/nJZesDqg"&gt;執行 bubble_2.c&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If our goal is to make our sort routine data type independent, one way of doing this is to use pointers to type void to point to the data instead of using the integer data type. As a start in that direction let's modify a few things in the above so that pointers can be used. To begin with, we'll stick with pointers to type integer.&lt;/p&gt;
 &lt;pre class="brush: c"&gt;
     /*----------------------- bubble_3.c -------------------------*/
@@ -1374,6 +1386,7 @@ If you want to have a contiguous block of memory dedicated to the storage of the
     /*------------------ end of bubble3.c -------------------------*/
 &lt;/pre&gt;
 
+&lt;p&gt;&lt;a href="http://codepad.org/YGRii7il"&gt;執行 Program bubble3.c&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Note the changes. We are now passing a pointer to an integer (or array of integers) to bubble(). And from within bubble we are passing pointers to the elements of the array that we want to compare to our comparison function. And, of course we are dereferencing these pointer in our compare() function in order to make the actual comparison. Our next step will be to convert the pointers in bubble() to pointers to type void so that that function will become more type insensitive. This is shown in bubble_4.&lt;/p&gt;
 &lt;pre class="brush: c"&gt;
     /*------------------ bubble_4.c ----------------------------*/
@@ -1434,6 +1447,7 @@ If you want to have a contiguous block of memory dedicated to the storage of the
     /*------------------ end of bubble_4.c ---------------------*/
 &lt;/pre&gt;
 
+&lt;p&gt;&lt;a href="http://codepad.org/qLL8r2Dr"&gt;執行 bubble_4.c&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Note that, in doing this, in compare() we had to introduce the casting of the void pointer types passed to the actual type being sorted. But, as we'll see later that's okay. And since what is being passed to bubble() is still a pointer to an array of integers, we had to cast these pointers to void pointers when we passed them as parameters in our call to compare().&lt;/p&gt;
 &lt;p&gt;We now address the problem of what we pass to bubble(). We want to make the first parameter of that function a void pointer also. But, that means that within bubble() we need to do something about the variable t, which is currently an integer. Also, where we use t = p[j-1]; the type of p[j-1] needs to be known in order to know how many bytes to copy to the variable t (or whatever we replace t with).&lt;/p&gt;
 &lt;p&gt;Currently, in bubble_4.c, knowledge within bubble() as to the type of the data being sorted (and hence the size of each individual element) is obtained from the fact that the first parameter is a pointer to type integer. If we are going to be able to use bubble() to sort any type of data, we need to make that pointer a pointer to type void. &lt;/p&gt;
@@ -1509,6 +1523,7 @@ If you want to have a contiguous block of memory dedicated to the storage of the
     /*--------------------- end of bubble5.c ---------------------*/
 &lt;/pre&gt;
 
+&lt;p&gt;&lt;a href="http://codepad.org/UoaGbBcR"&gt;執行 bubble5.c&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Note that I have changed the data type of the array from int to long to illustrate the changes needed in the compare() function. Within bubble() I've done away with the variable t (which we would have had to change from type int to type long). I have added a buffer of size 4 unsigned characters, which is the size needed to hold a long (this will change again in future modifications to this code). The unsigned character pointer *bp is used to point to the base of the array to be sorted, i.e. to the first element of that array.&lt;/p&gt;
 &lt;p&gt;We also had to modify what we passed to compare(), and how we do the swapping of elements that the comparison indicates need swapping. Use of memcpy() and pointer notation instead of array notation work towards this reduction in type sensitivity.&lt;/p&gt;
 &lt;p&gt;Again, making a careful comparison of bubble5.c with bubble4.c can result in improved understanding of what is happening and why.&lt;/p&gt;
@@ -1585,6 +1600,7 @@ If you want to have a contiguous block of memory dedicated to the storage of the
     /*------------------- end of bubble6.c ---------------------*/
 &lt;/pre&gt;
 
+&lt;p&gt;&lt;a href="http://codepad.org/Z066Lj9s"&gt;執行 bubble6.c&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;But, the fact that bubble() was unchanged from that used in bubble5.c indicates that that function is capable of sorting a wide variety of data types. What is left to do is to pass to bubble() the name of the comparison function we want to use so that it can be truly universal. Just as the name of an array is the address of the first element of the array in the data segment, the name of a function decays into the address of that function in the code segment. Thus we need to use a pointer to a function. In this case the comparison function.&lt;/p&gt;
 &lt;p&gt;Pointers to functions must match the functions pointed to in the number and types of the parameters and the type of the return value. In our case, we declare our function pointer as:&lt;/p&gt;
 &lt;p&gt;int (&lt;em&gt;fptr)(const void &lt;/em&gt;p1, const void *p2);&lt;/p&gt;
@@ -1698,6 +1714,7 @@ int(*fptr)(const void *, const void *));
     /*----------------- end of bubble7.c -----------------*/
 &lt;/pre&gt;
 
+&lt;p&gt;&lt;a href="http://codepad.org/Z1E8guTH"&gt;執行 bubble7.c&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;References for Chapter 10:&lt;/p&gt;
 &lt;p&gt;"Algorithms in C"
 Robert Sedgewick
