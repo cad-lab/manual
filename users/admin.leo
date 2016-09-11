@@ -37,6 +37,7 @@
 <v t="amd.20160515201036.1"><vh>@clean admin-20160515.md</vh></v>
 <v t="amd.20160521121117.1"><vh>@clean admin-20160521.md</vh></v>
 <v t="amd.20160521170214.1"><vh>@clean admin-20160521-1.md</vh></v>
+<v t="amd.20160911112932.1"><vh>@clean admin-20160911.md</vh></v>
 </v>
 </v>
 <v t="amd.20160401155844.1" a="E"><vh>blockdiag</vh>
@@ -45,7 +46,7 @@
 <v t="amd.20160401220930.1"><vh>@button nwdiag</vh></v>
 <v t="amd.20160401221004.1"><vh>nwdiag</vh></v>
 </v>
-<v t="amd.20160329172339.1"><vh>@path ./../content/pages</vh>
+<v t="amd.20160329172339.1" a="E"><vh>@path ./../content/pages</vh>
 <v t="amd.20160329172339.2" a="E"><vh>pages 文章</vh>
 <v t="amd.20160329172339.3"><vh>@edit template_pages.md</vh></v>
 </v>
@@ -58,6 +59,7 @@
 <t tx="amd.20160329124903.1"></t>
 <t tx="amd.20160329125251.1">@language md
 Title: template-啟動電腦輔助機械設計手冊編輯
+Date: 2016-03-29 12:00
 Category: MISC
 Tags: CADLAB, Ｍanual, MCAD
 Author: kmol
@@ -110,6 +112,7 @@ g.es("admin pelican 執行完畢")
 <t tx="amd.20160329172339.2"></t>
 <t tx="amd.20160401153226.1">@language md
 Title: 建立一個可程式的無線網路擷取點
+Date: 2016-04-01 12:00
 Category: RaspberryPi
 Tags: Wifi, Access Point, Python3, wsgi
 Author: kmol
@@ -322,6 +325,7 @@ nwdiag {
 }</t>
 <t tx="amd.20160514153433.1">@language md
 Title: Cherrypy 使用手冊
+Date: 2016-05-14 12:00
 Category: Cherrypy
 Tags: Python3, web-based
 Author: kmol
@@ -1194,6 +1198,7 @@ input {
 </t>
 <t tx="amd.20160515201036.1">@language md
 Title: Flask 導引 (一)
+Date: 2016-05-15 12:00
 Category: Flask
 Tags: Python3, web-based
 Author: kmol
@@ -1341,6 +1346,7 @@ index.html 的內容:
 &lt;/pre&gt;</t>
 <t tx="amd.20160521121117.1">@language md
 Title: C 程式語言的指標與陣列導引
+Date: 2016-05-21 11:00
 Category: C
 Tags: Pointer, Array
 Author: kmol
@@ -3091,6 +3097,7 @@ I am always ready to accept constructive criticism on this material, or review r
 </t>
 <t tx="amd.20160521170214.1">@language md
 Title: C 程式語言的指標與陣列導引 (中文翻譯)
+Date: 2016-05-21 12:00
 Category: C
 Tags: Pointer, Array
 Author: kmol
@@ -4967,6 +4974,117 @@ ISBN 0-201-51425-7
 I have written the preceding material to provide an introduction to pointers for newcomers to C. In C, the more one understands about pointers the greater flexibility one has in the writing of code. The above expands on my first effort at this which was entitled ptr_help.txt and found in an early version of Bob Stout's collection of C code SNIPPETS. The content in this version has been updated from that in PTRTUTOT.ZIP included in SNIP9510.ZIP.
 
 I am always ready to accept constructive criticism on this material, or review requests for the addition of other relevant material. Therefore, if you have questions, comments, criticisms, etc. concerning that which has been presented, I would greatly appreciate your contacting me via email me at tjensen@ix.netcom.com. 
+</t>
+<t tx="amd.20160911112932.1">@language md
+Title: Python 學習手冊 (一)
+Date: 2016-09-11 12:00
+Category: Python
+Tags: 計算機程式
+Author: kmol
+@others
+這一系列的 Python 學習手冊是以機械設計工程師的觀點進行編寫, 由於機械設計流程牽涉許多協同工程設計與分析專案的執行, 因此導引標的便以可攜、高效與持續改進為依歸. 並且配合計算機程式、網際內容管理、電腦輔助設計實習與協同產品設計實習等課程中的案例配合說明.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+##Python 程式語言緣起
+
+從 &lt;a href="https://en.wikipedia.org/wiki/History_of_Python"&gt;https://en.wikipedia.org/wiki/History_of_Python&lt;/a&gt; 的介紹, 可以得知 Python 程式語言是荷蘭人 Guido van Rossum 在 1989 年底發明的, 他曾說:
+
+In December 1989, I was looking for a "hobby" programming project that would keep me occupied during the week around Christmas. My office ... would be closed, but I had a home computer, and not much else on my hands. I decided to write an interpreter for the new scripting language I had been thinking about lately: a descendant of ABC that would appeal to Unix/C hackers. I chose Python as a working title for the project, being in a slightly irreverent mood (and a big fan of Monty Python's Flying Circus).
+ 
+也就是說, Python 是在一個聖誕節的假期, 用一台個人電腦創建的, 沿用了 &lt;a href="https://en.wikipedia.org/wiki/ABC_(programming_language)"&gt;ABC 程式語言&lt;/a&gt;的特性, 發明的動機希望吸引 Unix/C 用戶, 而程式語言的命名 Python, 則來自當時非常流行的英國 BBC 的電視劇 "&lt;a href="https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus"&gt;Monty Python's Flying Circus&lt;/a&gt;".
+
+2005-2012 年間, Guido van Rossum 曾經任職於 Google, 2012 年底之後, 轉職到 Dropbox 公司.
+
+2016 年 9 月 10 日, Guido van Rossum 利用 Github Pages 建立了&lt;a href="http://gvanrossum.github.io"&gt;個人網頁&lt;/a&gt;: &lt;a href="https://github.com/gvanrossum/gvanrossum.github.io"&gt;https://github.com/gvanrossum/gvanrossum.github.io&lt;/a&gt;.
+
+##Python 程式語言特性
+
+從 &lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.123.6836&amp;rep=rep1&amp;type=pdf"&gt;Computer Programming for everybody&lt;/a&gt; 提案中, 可以知道 Python 希望成為任何人都適合使用的程式語言, 並具備下列特性:
+
+1. 簡單直覺, 功能可與其他語言匹敵
+2. 開放原始碼, 任何人都能貢獻心力
+3. 程式碼容易理解, 就如同普通英文
+4. 適於各種專案, 且能快速完成開發
+
+##Python 版本
+
+2008 年底, Python 推出了 3.0 版, 與目前業界主流 Python 2.7 版並不相容, 初學者在學習時必須特別注意, 一般而言, 若沒有特別需要使用 Python 2 的程式庫, 未來各界仍將逐漸轉用 Python 3, 因此建議初學者可以直接使用 Python 3 之後的版本.
+
+另外, Python 程式語言雖然可以在 Windows, Linux 與 OS X 等不同操作系統中使用, 但是在 Windows 環境中, 使用者若需要在較長時段中維護模組版本, 經常會因為系統程式庫的差異而發生問題, 因此建議直接使用 &lt;a href="https://www.continuum.io/downloads"&gt;Anaconda&lt;/a&gt; 套件, 並且儘可能採用 &lt;a href="https://github.com/conda/conda"&gt;conda&lt;/a&gt; 工具來維護與 Python 有關的模組.
+
+##與領域專用語言的差異
+
+所謂的&lt;a href="https://en.wikipedia.org/wiki/Domain-specific_language"&gt;領域專用程式語言&lt;/a&gt; (Domain-Specific Language, DSL), 就是指 Matlab, Octave, Mathematica 等專用於特定範圍的程式語言, 而非如 C/C++、Python、Java 這種適用範圍較廣的通用程式語言. 有時 C/C++、Python、Java 程式語言也稱為&lt;a href="https://en.wikipedia.org/wiki/High-level_programming_language"&gt;高階程式語言&lt;/a&gt;, 而 DSL 則被歸納為 &lt;a href="https://en.wikipedia.org/wiki/Very_high-level_programming_language"&gt;Very High-Level Programming Language&lt;/a&gt; 之一.
+
+至於程式碼更接近電腦機器碼的則稱為 &lt;a href="https://en.wikipedia.org/wiki/Low-level_programming_language"&gt;Low-Level Programming Language&lt;/a&gt;, 組合語言 (Assembly Language) 就是一種低階程式語言.
+
+##自行建立可攜 Python 套件
+
+這裡以 Windows 環境下所需要的可攜 Python3 套件為例:
+
+1. 從 &lt;a href="http://conda.pydata.org/miniconda.html"&gt;http://conda.pydata.org/miniconda.html&lt;/a&gt; 下載 Miniconda 安裝程式後, 在 Windows 7 或 10 64 位元環境中安裝.
+2. 安裝結束後, 在 c:\ 目錄中建立 mini3 目錄, 然後進入 mini3 目錄, 建立 data 子目錄, 然後在 mini3 目錄中建立 start.bat 與 stop.bat 兩個檔案, start.bat 用來開啟可攜套件, stop.bat 則關閉套件.
+3. 將第1步驟所安裝的 c:\Miniconda3 目錄, 完整複製到 c:\mini3\data 目錄中, 然後進入控制台, 解除安裝 Miniconda3 (名稱可能是 Python 3.5.2 (Miniconda3 4.4.1 64-bit)
+4. 根據下列 start.bat 與 stop.bat 建立後, 就可以將 c:\mini3 複製到隨身碟或隨身硬碟中, 只要執行 start.bat 系統就會啟動, 執行 stop.bat 則終止額外的 y: 虛擬槽與 data 目錄的對應. 有關 mini3 可攜環境的使用, 將在隨後的導引中進行解說.
+
+start.bat 內容:
+
+&lt;pre class="brush: jscript"&gt;
+@echo off
+REM 設定 V 硬碟代號與 data 目錄對應
+set Disk=y
+subst %Disk%: "data"
+REM 設定 leo 相關對應 Home 位置
+set HomePath=%Disk%:\home
+set HomeDrive=%Disk%:\home
+set Home=%Disk%:\home
+REM 將後續的指令執行, 以 %Disk% 為主
+%Disk%:
+REM 設定 PYTHONPATH
+set PYTHONPATH=%Disk%:\Miniconda3
+set path1=%PATH%;%Disk%:\Miniconda3;%Disk%:\Miniconda3\Scripts;
+set path2=%Disk%:\apps\Git\bin;
+path=%path1%;%path2%;
+REM 啟動  SciTE
+start /MIN %Disk%:\SciTE\SciTE.exe
+REM 取 IPV4 IP address
+for /f "delims=[] tokens=2" %%a in ('ping -4 %computername% -n 1 ^| findstr "["') do (set thisip=%%a)
+REM echo %thisip%
+REM 取 IPV6 IP address
+REM for /f "delims=[] tokens=2" %%a in ('ping %computername% -n 1 ^| findstr "["') do (set thisip=%%a)
+REM echo %thisip%
+REM 啟動 Jupyter
+cd notebook
+start %Disk%:\Miniconda3\python.exe "%Disk%:\Miniconda3\Scripts\ipython3-script.py" notebook --ip=%thisip% --certfile=%Disk%:\home\ssl_cert.pem --profile=nbserver
+cd ..
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+python.exe %Disk%:\apps\launchLeo.py
+Exit
+&lt;/pre&gt;
+
+stop.bat 內容:
+
+&lt;pre class="brush: jscript"&gt;
+
+@echo off
+set Disk=y
+REM 關閉 SciTE
+taskkill /IM SciTE.exe /F
+REM 關閉 python
+taskkill /IM python.exe /F
+REM 清除資料
+path=%PATH%;
+REM del /Q /F  V:\tmp\*.*
+REM 終止虛擬硬碟與目錄的對應
+subst %Disk%: /D
+REM 關閉 cmd 指令視窗
+taskkill /IM cmd.exe /F
+EXIT
+&lt;/pre&gt;
+
 </t>
 </tnodes>
 </leo_file>

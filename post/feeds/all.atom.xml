@@ -1,5 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>CADLab 手冊 (虎尾科大MDE)</title><link href="http://cad-lab.github.io/manual/post/" rel="alternate"></link><link href="http://cad-lab.github.io/manual/post/feeds/all.atom.xml" rel="self"></link><id>http://cad-lab.github.io/manual/post/</id><updated>2016-06-16T22:55:11+08:00</updated><entry><title>C 程式語言的指標與陣列導引 (中文翻譯)</title><link href="http://cad-lab.github.io/manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html" rel="alternate"></link><updated>2016-06-16T22:55:11+08:00</updated><author><name>kmol</name></author><id>tag:cad-lab.github.io,2016-06-16:manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html</id><summary type="html">&lt;p&gt;&lt;a href="http://pweb.netcom.com/~tjensen/ptr/pointers.htm"&gt;http://pweb.netcom.com/~tjensen/ptr/pointers.htm&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CADLab 手冊 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2016-09-11T12:00:00+08:00</updated><entry><title>Python 學習手冊 (一)</title><link href="./python-xue-xi-shou-ce-yi.html" rel="alternate"></link><updated>2016-09-11T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:,2016-09-11:./python-xue-xi-shou-ce-yi.html</id><summary type="html">&lt;p&gt;這一系列的 Python 學習手冊是以機械設計工程師的觀點進行編寫, 由於機械設計流程牽涉許多協同工程設計與分析專案的執行, 因此導引標的便以可攜、高效與持續改進為依歸. 並且配合計算機程式、網際內容管理、電腦輔助設計實習與協同產品設計實習等課程中的案例配合說明.&lt;/p&gt;
+
+
+&lt;h2&gt;Python 程式語言緣起&lt;/h2&gt;
+&lt;p&gt;從 &lt;a href="https://en.wikipedia.org/wiki/History_of_Python"&gt;https://en.wikipedia.org/wiki/History_of_Python&lt;/a&gt; 的介紹, 可以得知 Python 程式語言是荷蘭人 Guido van Rossum 在 1989 年底發明的, 他曾說:&lt;/p&gt;
+&lt;p&gt;In December 1989, I was looking for a "hobby" programming project that would keep me occupied during the week around Christmas. My office ... would be closed, but I had a home computer, and not much else on my hands. I decided to write an interpreter for the new scripting language I had been thinking about lately: a descendant of ABC that would appeal to Unix/C hackers. I chose Python as a working title for the project, being in a slightly irreverent mood (and a big fan of Monty Python's Flying Circus).&lt;/p&gt;
+&lt;p&gt;也就是說, Python 是在一個聖誕節的假期, 用一台個人電腦創建的, 沿用了 &lt;a href="https://en.wikipedia.org/wiki/ABC_(programming_language)"&gt;ABC 程式語言&lt;/a&gt;的特性, 發明的動機希望吸引 Unix/C 用戶, 而程式語言的命名 Python, 則來自當時非常流行的英國 BBC 的電視劇 "&lt;a href="https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus"&gt;Monty Python's Flying Circus&lt;/a&gt;".&lt;/p&gt;
+&lt;p&gt;2005-2012 年間, Guido van Rossum 曾經任職於 Google, 2012 年底之後, 轉職到 Dropbox 公司.&lt;/p&gt;
+&lt;p&gt;2016 年 9 月 10 日, Guido van Rossum 利用 Github Pages 建立了&lt;a href="http://gvanrossum.github.io"&gt;個人網頁&lt;/a&gt;: &lt;a href="https://github.com/gvanrossum/gvanrossum.github.io"&gt;https://github.com/gvanrossum/gvanrossum.github.io&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Python 程式語言特性&lt;/h2&gt;
+&lt;p&gt;從 &lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.123.6836&amp;rep=rep1&amp;type=pdf"&gt;Computer Programming for everybody&lt;/a&gt; 提案中, 可以知道 Python 希望成為任何人都適合使用的程式語言, 並具備下列特性:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;簡單直覺, 功能可與其他語言匹敵&lt;/li&gt;
+&lt;li&gt;開放原始碼, 任何人都能貢獻心力&lt;/li&gt;
+&lt;li&gt;程式碼容易理解, 就如同普通英文&lt;/li&gt;
+&lt;li&gt;適於各種專案, 且能快速完成開發&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Python 版本&lt;/h2&gt;
+&lt;p&gt;2008 年底, Python 推出了 3.0 版, 與目前業界主流 Python 2.7 版並不相容, 初學者在學習時必須特別注意, 一般而言, 若沒有特別需要使用 Python 2 的程式庫, 未來各界仍將逐漸轉用 Python 3, 因此建議初學者可以直接使用 Python 3 之後的版本.&lt;/p&gt;
+&lt;p&gt;另外, Python 程式語言雖然可以在 Windows, Linux 與 OS X 等不同操作系統中使用, 但是在 Windows 環境中, 使用者若需要在較長時段中維護模組版本, 經常會因為系統程式庫的差異而發生問題, 因此建議直接使用 &lt;a href="https://www.continuum.io/downloads"&gt;Anaconda&lt;/a&gt; 套件, 並且儘可能採用 &lt;a href="https://github.com/conda/conda"&gt;conda&lt;/a&gt; 工具來維護與 Python 有關的模組.&lt;/p&gt;
+&lt;h2&gt;與領域專用語言的差異&lt;/h2&gt;
+&lt;p&gt;所謂的&lt;a href="https://en.wikipedia.org/wiki/Domain-specific_language"&gt;領域專用程式語言&lt;/a&gt; (Domain-Specific Language, DSL), 就是指 Matlab, Octave, Mathematica 等專用於特定範圍的程式語言, 而非如 C/C++、Python、Java 這種適用範圍較廣的通用程式語言. 有時 C/C++、Python、Java 程式語言也稱為&lt;a href="https://en.wikipedia.org/wiki/High-level_programming_language"&gt;高階程式語言&lt;/a&gt;, 而 DSL 則被歸納為 &lt;a href="https://en.wikipedia.org/wiki/Very_high-level_programming_language"&gt;Very High-Level Programming Language&lt;/a&gt; 之一.&lt;/p&gt;
+&lt;p&gt;至於程式碼更接近電腦機器碼的則稱為 &lt;a href="https://en.wikipedia.org/wiki/Low-level_programming_language"&gt;Low-Level Programming Language&lt;/a&gt;, 組合語言 (Assembly Language) 就是一種低階程式語言.&lt;/p&gt;
+&lt;h2&gt;自行建立可攜 Python 套件&lt;/h2&gt;
+&lt;p&gt;這裡以 Windows 環境下所需要的可攜 Python3 套件為例:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;從 &lt;a href="http://conda.pydata.org/miniconda.html"&gt;http://conda.pydata.org/miniconda.html&lt;/a&gt; 下載 Miniconda 安裝程式後, 在 Windows 7 或 10 64 位元環境中安裝.&lt;/li&gt;
+&lt;li&gt;安裝結束後, 在 c:\ 目錄中建立 mini3 目錄, 然後進入 mini3 目錄, 建立 data 子目錄, 然後在 mini3 目錄中建立 start.bat 與 stop.bat 兩個檔案, start.bat 用來開啟可攜套件, stop.bat 則關閉套件.&lt;/li&gt;
+&lt;li&gt;將第1步驟所安裝的 c:\Miniconda3 目錄, 完整複製到 c:\mini3\data 目錄中, 然後進入控制台, 解除安裝 Miniconda3 (名稱可能是 Python 3.5.2 (Miniconda3 4.4.1 64-bit)&lt;/li&gt;
+&lt;li&gt;根據下列 start.bat 與 stop.bat 建立後, 就可以將 c:\mini3 複製到隨身碟或隨身硬碟中, 只要執行 start.bat 系統就會啟動, 執行 stop.bat 則終止額外的 y: 虛擬槽與 data 目錄的對應. 有關 mini3 可攜環境的使用, 將在隨後的導引中進行解說.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;start.bat 內容:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+@echo off
+REM 設定 V 硬碟代號與 data 目錄對應
+set Disk=y
+subst %Disk%: "data"
+REM 設定 leo 相關對應 Home 位置
+set HomePath=%Disk%:\home
+set HomeDrive=%Disk%:\home
+set Home=%Disk%:\home
+REM 將後續的指令執行, 以 %Disk% 為主
+%Disk%:
+REM 設定 PYTHONPATH
+set PYTHONPATH=%Disk%:\Miniconda3
+set path1=%PATH%;%Disk%:\Miniconda3;%Disk%:\Miniconda3\Scripts;
+set path2=%Disk%:\apps\Git\bin;
+path=%path1%;%path2%;
+REM 啟動  SciTE
+start /MIN %Disk%:\SciTE\SciTE.exe
+REM 取 IPV4 IP address
+for /f "delims=[] tokens=2" %%a in ('ping -4 %computername% -n 1 ^| findstr "["') do (set thisip=%%a)
+REM echo %thisip%
+REM 取 IPV6 IP address
+REM for /f "delims=[] tokens=2" %%a in ('ping %computername% -n 1 ^| findstr "["') do (set thisip=%%a)
+REM echo %thisip%
+REM 啟動 Jupyter
+cd notebook
+start %Disk%:\Miniconda3\python.exe "%Disk%:\Miniconda3\Scripts\ipython3-script.py" notebook --ip=%thisip% --certfile=%Disk%:\home\ssl_cert.pem --profile=nbserver
+cd ..
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+python.exe %Disk%:\apps\launchLeo.py
+Exit
+&lt;/pre&gt;
+
+&lt;p&gt;stop.bat 內容:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+
+@echo off
+set Disk=y
+REM 關閉 SciTE
+taskkill /IM SciTE.exe /F
+REM 關閉 python
+taskkill /IM python.exe /F
+REM 清除資料
+path=%PATH%;
+REM del /Q /F  V:\tmp\*.*
+REM 終止虛擬硬碟與目錄的對應
+subst %Disk%: /D
+REM 關閉 cmd 指令視窗
+taskkill /IM cmd.exe /F
+EXIT
+&lt;/pre&gt;</summary><category term="計算機程式"></category></entry><entry><title>C 程式語言的指標與陣列導引 (中文翻譯)</title><link href="./c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html" rel="alternate"></link><updated>2016-05-21T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:,2016-05-21:./c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html</id><summary type="html">&lt;p&gt;&lt;a href="http://pweb.netcom.com/~tjensen/ptr/pointers.htm"&gt;http://pweb.netcom.com/~tjensen/ptr/pointers.htm&lt;/a&gt;&lt;/p&gt;
 
 
 &lt;p&gt;其他參考: &lt;/p&gt;
@@ -1722,7 +1806,7 @@ Addison-Wesley
 ISBN 0-201-51425-7&lt;/p&gt;
 &lt;h2&gt;EPILOG&lt;/h2&gt;
 &lt;p&gt;I have written the preceding material to provide an introduction to pointers for newcomers to C. In C, the more one understands about pointers the greater flexibility one has in the writing of code. The above expands on my first effort at this which was entitled ptr_help.txt and found in an early version of Bob Stout's collection of C code SNIPPETS. The content in this version has been updated from that in PTRTUTOT.ZIP included in SNIP9510.ZIP.&lt;/p&gt;
-&lt;p&gt;I am always ready to accept constructive criticism on this material, or review requests for the addition of other relevant material. Therefore, if you have questions, comments, criticisms, etc. concerning that which has been presented, I would greatly appreciate your contacting me via email me at tjensen@ix.netcom.com. &lt;/p&gt;</summary><category term="Pointer"></category><category term="Array"></category></entry><entry><title>C 程式語言的指標與陣列導引</title><link href="http://cad-lab.github.io/manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin.html" rel="alternate"></link><updated>2016-05-21T17:38:10+08:00</updated><author><name>kmol</name></author><id>tag:cad-lab.github.io,2016-05-21:manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin.html</id><summary type="html">&lt;p&gt;&lt;a href="http://pweb.netcom.com/~tjensen/ptr/pointers.htm"&gt;http://pweb.netcom.com/~tjensen/ptr/pointers.htm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I am always ready to accept constructive criticism on this material, or review requests for the addition of other relevant material. Therefore, if you have questions, comments, criticisms, etc. concerning that which has been presented, I would greatly appreciate your contacting me via email me at tjensen@ix.netcom.com. &lt;/p&gt;</summary><category term="Pointer"></category><category term="Array"></category></entry><entry><title>C 程式語言的指標與陣列導引</title><link href="./c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin.html" rel="alternate"></link><updated>2016-05-21T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:,2016-05-21:./c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin.html</id><summary type="html">&lt;p&gt;&lt;a href="http://pweb.netcom.com/~tjensen/ptr/pointers.htm"&gt;http://pweb.netcom.com/~tjensen/ptr/pointers.htm&lt;/a&gt;&lt;/p&gt;
 
 
 &lt;p&gt;其他參考: &lt;a href="http://c.learncodethehardway.org/book/"&gt;http://c.learncodethehardway.org/book/&lt;/a&gt;&lt;/p&gt;
@@ -3372,7 +3456,7 @@ Addison-Wesley
 ISBN 0-201-51425-7&lt;/p&gt;
 &lt;h2&gt;EPILOG&lt;/h2&gt;
 &lt;p&gt;I have written the preceding material to provide an introduction to pointers for newcomers to C. In C, the more one understands about pointers the greater flexibility one has in the writing of code. The above expands on my first effort at this which was entitled ptr_help.txt and found in an early version of Bob Stout's collection of C code SNIPPETS. The content in this version has been updated from that in PTRTUTOT.ZIP included in SNIP9510.ZIP.&lt;/p&gt;
-&lt;p&gt;I am always ready to accept constructive criticism on this material, or review requests for the addition of other relevant material. Therefore, if you have questions, comments, criticisms, etc. concerning that which has been presented, I would greatly appreciate your contacting me via email me at tjensen@ix.netcom.com. &lt;/p&gt;</summary><category term="Pointer"></category><category term="Array"></category></entry><entry><title>Flask 導引 (一)</title><link href="http://cad-lab.github.io/manual/post/flask-dao-yin-yi.html" rel="alternate"></link><updated>2016-05-20T23:53:49+08:00</updated><author><name>kmol</name></author><id>tag:cad-lab.github.io,2016-05-20:manual/post/flask-dao-yin-yi.html</id><summary type="html">&lt;p&gt;&lt;a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-now-with-python-3-support"&gt;http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-now-with-python-3-support&lt;/a&gt; 是一份介紹 Flask 網際程式框架使用的導引資料.&lt;/p&gt;
+&lt;p&gt;I am always ready to accept constructive criticism on this material, or review requests for the addition of other relevant material. Therefore, if you have questions, comments, criticisms, etc. concerning that which has been presented, I would greatly appreciate your contacting me via email me at tjensen@ix.netcom.com. &lt;/p&gt;</summary><category term="Pointer"></category><category term="Array"></category></entry><entry><title>Flask 導引 (一)</title><link href="./flask-dao-yin-yi.html" rel="alternate"></link><updated>2016-05-15T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:,2016-05-15:./flask-dao-yin-yi.html</id><summary type="html">&lt;p&gt;&lt;a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-now-with-python-3-support"&gt;http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-now-with-python-3-support&lt;/a&gt; 是一份介紹 Flask 網際程式框架使用的導引資料.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world"&gt;Part I&lt;/a&gt; 介紹如何傳回 Hello World 字串.&lt;/p&gt;
@@ -3491,7 +3575,7 @@ def index():
     &amp;lt;/p&amp;gt;
     {% endfor %}
 {% endblock %}
-&lt;/pre&gt;</summary><category term="Python3"></category><category term="web-based"></category></entry><entry><title>Cherrypy 使用手冊</title><link href="http://cad-lab.github.io/manual/post/cherrypy-shi-yong-shou-ce.html" rel="alternate"></link><updated>2016-05-14T21:38:00+08:00</updated><author><name>kmol</name></author><id>tag:cad-lab.github.io,2016-05-14:manual/post/cherrypy-shi-yong-shou-ce.html</id><summary type="html">&lt;p&gt;Cherrypy 相關功能介紹&lt;/p&gt;
+&lt;/pre&gt;</summary><category term="Python3"></category><category term="web-based"></category></entry><entry><title>Cherrypy 使用手冊</title><link href="./cherrypy-shi-yong-shou-ce.html" rel="alternate"></link><updated>2016-05-14T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:,2016-05-14:./cherrypy-shi-yong-shou-ce.html</id><summary type="html">&lt;p&gt;Cherrypy 相關功能介紹&lt;/p&gt;
 
 
 &lt;h2&gt;CherryPy 模組安裝:&lt;/h2&gt;
@@ -4337,7 +4421,7 @@ input {
      color: #A1A1A1;
 }
 '''
-&lt;/pre&gt;</summary><category term="Python3"></category><category term="web-based"></category></entry><entry><title>建立一個可程式的無線網路擷取點</title><link href="http://cad-lab.github.io/manual/post/jian-li-yi-ge-ke-cheng-shi-de-wu-xian-wang-lu-xie-qu-dian.html" rel="alternate"></link><updated>2016-04-01T16:06:22+08:00</updated><author><name>kmol</name></author><id>tag:cad-lab.github.io,2016-04-01:manual/post/jian-li-yi-ge-ke-cheng-shi-de-wu-xian-wang-lu-xie-qu-dian.html</id><summary type="html">&lt;p&gt;Raspberry Pi 3 model B 已經內建 Wifi, 因此只要安裝&lt;/p&gt;
+&lt;/pre&gt;</summary><category term="Python3"></category><category term="web-based"></category></entry><entry><title>建立一個可程式的無線網路擷取點</title><link href="./jian-li-yi-ge-ke-cheng-shi-de-wu-xian-wang-lu-xie-qu-dian.html" rel="alternate"></link><updated>2016-04-01T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:,2016-04-01:./jian-li-yi-ge-ke-cheng-shi-de-wu-xian-wang-lu-xie-qu-dian.html</id><summary type="html">&lt;p&gt;Raspberry Pi 3 model B 已經內建 Wifi, 因此只要安裝&lt;/p&gt;
 
 
 &lt;p&gt;hostapd – Host AccessPoint Daemon &lt;/p&gt;
@@ -4364,7 +4448,23 @@ up iptables-restore &amp;lt; /etc/iptables.ipv4.nat&lt;/p&gt;
 iface eth0 inet dhcp&lt;/p&gt;
 &lt;p&gt;auto br0
 iface br0 inet dhcp
-bridge_ports eth0 wlan0&lt;/p&gt;</summary><category term="Wifi"></category><category term="Access Point"></category><category term="Python3"></category><category term="wsgi"></category></entry><entry><title>user1-測試 content 目錄下的 md 檔案轉換</title><link href="http://cad-lab.github.io/manual/post/user1-ce-shi-content-mu-lu-xia-de-md-dang-an-zhuan-huan.html" rel="alternate"></link><updated>2016-03-29T17:55:05+08:00</updated><author><name>kmol</name></author><id>tag:cad-lab.github.io,2016-03-29:manual/post/user1-ce-shi-content-mu-lu-xia-de-md-dang-an-zhuan-huan.html</id><summary type="html">&lt;p&gt;手冊類別分為 OnShape, Solvespace, FreeCAD, Elmer, V-rep 以及 Jupyter, 加上範例, 編寫模式與架構則透過 Leo Editor, Pelican,  與 Github pull requests 完成.&lt;/p&gt;
+bridge_ports eth0 wlan0&lt;/p&gt;</summary><category term="Wifi"></category><category term="Access Point"></category><category term="Python3"></category><category term="wsgi"></category></entry><entry><title>template-啟動電腦輔助機械設計手冊編輯</title><link href="./template-qi-dong-dian-nao-fu-zhu-ji-jie-she-ji-shou-ce-bian-ji.html" rel="alternate"></link><updated>2016-03-29T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-29:./template-qi-dong-dian-nao-fu-zhu-ji-jie-she-ji-shou-ce-bian-ji.html</id><summary type="html">&lt;p&gt;手冊類別分為 OnShape, Solvespace, FreeCAD, Elmer, V-rep 以及 Jupyter, 加上範例, 編寫模式與架構則透過 Leo Editor, Pelican,  與 Github pull requests 完成.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href="http://cad-lab.github.io/manual"&gt;http://cad-lab.github.io/manual&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;文章類別將分為 onshape, solvespace, freecad, elmer, vrep, jupyter, rpi, 範例與 MISC 等.&lt;/p&gt;
+&lt;p&gt;CADLab 手冊將 Pelican 設定分為本地端與 gh-pages 端的原因在於 disqus 設定, 本地端無需 disqus 討論功能, 而 gh-pages 端則需要網址全稱才能正確與 disqus 設定連結, 因此所有使用者在近端檢視時, 必須採用近端的按鈕, 而要送到遠端前則必須要用遠端按鈕產生所需要的 post 目錄下的所有資料後, 再提交推送.&lt;/p&gt;
+&lt;p&gt;以下為圖片引用方法, 建議放到 files 目錄下, 並且用相對目錄引用各自放在以用戶名稱命名的子目錄中, 以避免多用戶因採相同檔名而覆寫:&lt;/p&gt;
+&lt;pre class="brush: python;"&gt;
+&lt;img src="./../files/user1/github.png" /&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;得到結果如下:&lt;/p&gt;
+&lt;p&gt;&lt;img src="./../files/user1/github.png" /&gt;&lt;/p&gt;
+&lt;p&gt;如何協同編輯 CADLAb 手冊:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="CADLAB"></category><category term="Ｍanual"></category><category term="MCAD"></category></entry><entry><title>user1-測試 content 目錄下的 md 檔案轉換</title><link href="./user1-ce-shi-content-mu-lu-xia-de-md-dang-an-zhuan-huan.html" rel="alternate"></link><updated>2016-03-29T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-29:./user1-ce-shi-content-mu-lu-xia-de-md-dang-an-zhuan-huan.html</id><summary type="html">&lt;p&gt;手冊類別分為 OnShape, Solvespace, FreeCAD, Elmer, V-rep 以及 Jupyter, 加上範例, 編寫模式與架構則透過 Leo Editor, Pelican,  與 Github pull requests 完成.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;a href="http://cad-lab.github.io/manual"&gt;http://cad-lab.github.io/manual&lt;/a&gt;&lt;/p&gt;
@@ -4410,20 +4510,4 @@ Task1 相關: &lt;a href="https://cmsimply-cadlab.rhcloud.com/get_page?heading=2
 &lt;p&gt;如何協同編輯 CADLAb 手冊:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;測試位於 content/user1 下的 md 檔案能否轉為 html&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="CADLAB"></category><category term="Ｍanual"></category><category term="MCAD"></category></entry><entry><title>template-啟動電腦輔助機械設計手冊編輯</title><link href="http://cad-lab.github.io/manual/post/template-qi-dong-dian-nao-fu-zhu-ji-jie-she-ji-shou-ce-bian-ji.html" rel="alternate"></link><updated>2016-03-29T17:36:12+08:00</updated><author><name>kmol</name></author><id>tag:cad-lab.github.io,2016-03-29:manual/post/template-qi-dong-dian-nao-fu-zhu-ji-jie-she-ji-shou-ce-bian-ji.html</id><summary type="html">&lt;p&gt;手冊類別分為 OnShape, Solvespace, FreeCAD, Elmer, V-rep 以及 Jupyter, 加上範例, 編寫模式與架構則透過 Leo Editor, Pelican,  與 Github pull requests 完成.&lt;/p&gt;
-
-
-&lt;p&gt;&lt;a href="http://cad-lab.github.io/manual"&gt;http://cad-lab.github.io/manual&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;文章類別將分為 onshape, solvespace, freecad, elmer, vrep, jupyter, rpi, 範例與 MISC 等.&lt;/p&gt;
-&lt;p&gt;CADLab 手冊將 Pelican 設定分為本地端與 gh-pages 端的原因在於 disqus 設定, 本地端無需 disqus 討論功能, 而 gh-pages 端則需要網址全稱才能正確與 disqus 設定連結, 因此所有使用者在近端檢視時, 必須採用近端的按鈕, 而要送到遠端前則必須要用遠端按鈕產生所需要的 post 目錄下的所有資料後, 再提交推送.&lt;/p&gt;
-&lt;p&gt;以下為圖片引用方法, 建議放到 files 目錄下, 並且用相對目錄引用各自放在以用戶名稱命名的子目錄中, 以避免多用戶因採相同檔名而覆寫:&lt;/p&gt;
-&lt;pre class="brush: python;"&gt;
-&lt;img src="./../files/user1/github.png" /&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;得到結果如下:&lt;/p&gt;
-&lt;p&gt;&lt;img src="./../files/user1/github.png" /&gt;&lt;/p&gt;
-&lt;p&gt;如何協同編輯 CADLAb 手冊:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;</summary><category term="CADLAB"></category><category term="Ｍanual"></category><category term="MCAD"></category></entry></feed>

@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>MCAD - CADLab 手冊 (虎尾科大MDE)</title>
+    <title>Python 學習手冊 (一) - CADLab 手冊 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,27 +166,32 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
+<link rel="canonical" href="./python-xue-xi-shou-ce-yi.html">
 
-    <meta name="author" content="kmol" />
-    <meta name="keywords" content="MCAD" />
+        <meta name="author" content="kmol" />
+        <meta name="keywords" content="計算機程式" />
+        <meta name="description" content="這一系列的 Python 學習手冊是以機械設計工程師的觀點進行編寫, 由於機械設計流程牽涉許多協同工程設計與分析專案的執行, 因此導引標的便以可攜、高效與持續改進為依歸. 並且配合計算機程式、網際內容管理、電腦輔助設計實習與協同產品設計實習等課程中的案例配合說明." />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="CADLab 手冊 (虎尾科大MDE)" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="CADLab 手冊 (虎尾科大MDE)"/>
-        <meta property="og:url" content=".."/>
-        <meta property="og:description" content="CADLab 手冊 (虎尾科大MDE)"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Python 學習手冊 (一)"/>
+        <meta property="og:url" content="./python-xue-xi-shou-ce-yi.html"/>
+        <meta property="og:description" content="這一系列的 Python 學習手冊是以機械設計工程師的觀點進行編寫, 由於機械設計流程牽涉許多協同工程設計與分析專案的執行, 因此導引標的便以可攜、高效與持續改進為依歸. 並且配合計算機程式、網際內容管理、電腦輔助設計實習與協同產品設計實習等課程中的案例配合說明."/>
+        <meta property="article:published_time" content="2016-09-11" />
+            <meta property="article:section" content="Python" />
+            <meta property="article:tag" content="計算機程式" />
+            <meta property="article:author" content="kmol" />
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="../theme/css/bootstrap.united.min.css" type="text/css"/>
-    <link href="../theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./theme/css/bootstrap.united.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="../theme/css/pygments/monokai.css" rel="stylesheet">
-    <link href="../theme/tipuesearch/tipuesearch.css" rel="stylesheet">
-    <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
+    <link href="./theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="./theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
 
-        <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="CADLab 手冊 (虎尾科大MDE) ATOM Feed"/>
 
 <script type="text/javascript" src="http://cad-lab.github.io/cadlab_data/files/syntaxhighlighter/shCore.js"></script>
@@ -247,40 +252,40 @@ init_mathjax();
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="../" class="navbar-brand">
+            <a href="./" class="navbar-brand">
 CADLab 手冊 (虎尾科大MDE)            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="../pages/about/">
+                         <li><a href="./pages/about/">
                              About
                           </a></li>
                         <li >
-                            <a href="../category/c.html">C</a>
+                            <a href="./category/c.html">C</a>
                         </li>
                         <li >
-                            <a href="../category/cherrypy.html">Cherrypy</a>
+                            <a href="./category/cherrypy.html">Cherrypy</a>
                         </li>
                         <li >
-                            <a href="../category/flask.html">Flask</a>
+                            <a href="./category/flask.html">Flask</a>
                         </li>
                         <li >
-                            <a href="../category/misc.html">Misc</a>
+                            <a href="./category/misc.html">Misc</a>
+                        </li>
+                        <li class="active">
+                            <a href="./category/python.html">Python</a>
                         </li>
                         <li >
-                            <a href="../category/python.html">Python</a>
-                        </li>
-                        <li >
-                            <a href="../category/raspberrypi.html">Raspberrypi</a>
+                            <a href="./category/raspberrypi.html">Raspberrypi</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
-                <form class="navbar-search" action="../search.html">
+                <form class="navbar-search" action="./search.html">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
-              <li><a href="../archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+              <li><a href="./archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -292,22 +297,124 @@ CADLab 手冊 (虎尾科大MDE)            </a>
     <div class="row">
         <div class="col-sm-9">
 
-            <article>
-                <h2><a href="../template-qi-dong-dian-nao-fu-zhu-ji-jie-she-ji-shou-ce-bian-ji.html">template-啟動電腦輔助機械設計手冊編輯</a></h2>
-                <div class="summary"><p>手冊類別分為 OnShape, Solvespace, FreeCAD, Elmer, V-rep 以及 Jupyter, 加上範例, 編寫模式與架構則透過 Leo Editor, Pelican,  與 Github pull requests 完成.</p>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="./python-xue-xi-shou-ce-yi.html"
+                       rel="bookmark"
+                       title="Permalink to Python 學習手冊 (一)">
+                        Python 學習手冊 (一)
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-09-11T12:00:00+08:00"> 日 11 九月 2016</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="./author/kmol.html"><i class="fa fa-user"></i> kmol</a>
 
-                    <a class="btn btn-default btn-xs" href="../template-qi-dong-dian-nao-fu-zhu-ji-jie-she-ji-shou-ce-bian-ji.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="../user1-ce-shi-content-mu-lu-xia-de-md-dang-an-zhuan-huan.html">user1-測試 content 目錄下的 md 檔案轉換</a></h2>
-                <div class="summary"><p>手冊類別分為 OnShape, Solvespace, FreeCAD, Elmer, V-rep 以及 Jupyter, 加上範例, 編寫模式與架構則透過 Leo Editor, Pelican,  與 Github pull requests 完成.</p>
 
-                    <a class="btn btn-default btn-xs" href="../user1-ce-shi-content-mu-lu-xia-de-md-dang-an-zhuan-huan.html">more ...</a>
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/ji-suan-ji-cheng-shi.html">計算機程式</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </article>
-            <hr/>
+                <p>這一系列的 Python 學習手冊是以機械設計工程師的觀點進行編寫, 由於機械設計流程牽涉許多協同工程設計與分析專案的執行, 因此導引標的便以可攜、高效與持續改進為依歸. 並且配合計算機程式、網際內容管理、電腦輔助設計實習與協同產品設計實習等課程中的案例配合說明.</p>
+
+
+<h2>Python 程式語言緣起</h2>
+<p>從 <a href="https://en.wikipedia.org/wiki/History_of_Python">https://en.wikipedia.org/wiki/History_of_Python</a> 的介紹, 可以得知 Python 程式語言是荷蘭人 Guido van Rossum 在 1989 年底發明的, 他曾說:</p>
+<p>In December 1989, I was looking for a "hobby" programming project that would keep me occupied during the week around Christmas. My office ... would be closed, but I had a home computer, and not much else on my hands. I decided to write an interpreter for the new scripting language I had been thinking about lately: a descendant of ABC that would appeal to Unix/C hackers. I chose Python as a working title for the project, being in a slightly irreverent mood (and a big fan of Monty Python's Flying Circus).</p>
+<p>也就是說, Python 是在一個聖誕節的假期, 用一台個人電腦創建的, 沿用了 <a href="https://en.wikipedia.org/wiki/ABC_(programming_language)">ABC 程式語言</a>的特性, 發明的動機希望吸引 Unix/C 用戶, 而程式語言的命名 Python, 則來自當時非常流行的英國 BBC 的電視劇 "<a href="https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus">Monty Python's Flying Circus</a>".</p>
+<p>2005-2012 年間, Guido van Rossum 曾經任職於 Google, 2012 年底之後, 轉職到 Dropbox 公司.</p>
+<p>2016 年 9 月 10 日, Guido van Rossum 利用 Github Pages 建立了<a href="http://gvanrossum.github.io">個人網頁</a>: <a href="https://github.com/gvanrossum/gvanrossum.github.io">https://github.com/gvanrossum/gvanrossum.github.io</a>.</p>
+<h2>Python 程式語言特性</h2>
+<p>從 <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.123.6836&rep=rep1&type=pdf">Computer Programming for everybody</a> 提案中, 可以知道 Python 希望成為任何人都適合使用的程式語言, 並具備下列特性:</p>
+<ol>
+<li>簡單直覺, 功能可與其他語言匹敵</li>
+<li>開放原始碼, 任何人都能貢獻心力</li>
+<li>程式碼容易理解, 就如同普通英文</li>
+<li>適於各種專案, 且能快速完成開發</li>
+</ol>
+<h2>Python 版本</h2>
+<p>2008 年底, Python 推出了 3.0 版, 與目前業界主流 Python 2.7 版並不相容, 初學者在學習時必須特別注意, 一般而言, 若沒有特別需要使用 Python 2 的程式庫, 未來各界仍將逐漸轉用 Python 3, 因此建議初學者可以直接使用 Python 3 之後的版本.</p>
+<p>另外, Python 程式語言雖然可以在 Windows, Linux 與 OS X 等不同操作系統中使用, 但是在 Windows 環境中, 使用者若需要在較長時段中維護模組版本, 經常會因為系統程式庫的差異而發生問題, 因此建議直接使用 <a href="https://www.continuum.io/downloads">Anaconda</a> 套件, 並且儘可能採用 <a href="https://github.com/conda/conda">conda</a> 工具來維護與 Python 有關的模組.</p>
+<h2>與領域專用語言的差異</h2>
+<p>所謂的<a href="https://en.wikipedia.org/wiki/Domain-specific_language">領域專用程式語言</a> (Domain-Specific Language, DSL), 就是指 Matlab, Octave, Mathematica 等專用於特定範圍的程式語言, 而非如 C/C++、Python、Java 這種適用範圍較廣的通用程式語言. 有時 C/C++、Python、Java 程式語言也稱為<a href="https://en.wikipedia.org/wiki/High-level_programming_language">高階程式語言</a>, 而 DSL 則被歸納為 <a href="https://en.wikipedia.org/wiki/Very_high-level_programming_language">Very High-Level Programming Language</a> 之一.</p>
+<p>至於程式碼更接近電腦機器碼的則稱為 <a href="https://en.wikipedia.org/wiki/Low-level_programming_language">Low-Level Programming Language</a>, 組合語言 (Assembly Language) 就是一種低階程式語言.</p>
+<h2>自行建立可攜 Python 套件</h2>
+<p>這裡以 Windows 環境下所需要的可攜 Python3 套件為例:</p>
+<ol>
+<li>從 <a href="http://conda.pydata.org/miniconda.html">http://conda.pydata.org/miniconda.html</a> 下載 Miniconda 安裝程式後, 在 Windows 7 或 10 64 位元環境中安裝.</li>
+<li>安裝結束後, 在 c:\ 目錄中建立 mini3 目錄, 然後進入 mini3 目錄, 建立 data 子目錄, 然後在 mini3 目錄中建立 start.bat 與 stop.bat 兩個檔案, start.bat 用來開啟可攜套件, stop.bat 則關閉套件.</li>
+<li>將第1步驟所安裝的 c:\Miniconda3 目錄, 完整複製到 c:\mini3\data 目錄中, 然後進入控制台, 解除安裝 Miniconda3 (名稱可能是 Python 3.5.2 (Miniconda3 4.4.1 64-bit)</li>
+<li>根據下列 start.bat 與 stop.bat 建立後, 就可以將 c:\mini3 複製到隨身碟或隨身硬碟中, 只要執行 start.bat 系統就會啟動, 執行 stop.bat 則終止額外的 y: 虛擬槽與 data 目錄的對應. 有關 mini3 可攜環境的使用, 將在隨後的導引中進行解說.</li>
+</ol>
+<p>start.bat 內容:</p>
+<pre class="brush: jscript">
+@echo off
+REM 設定 V 硬碟代號與 data 目錄對應
+set Disk=y
+subst %Disk%: "data"
+REM 設定 leo 相關對應 Home 位置
+set HomePath=%Disk%:\home
+set HomeDrive=%Disk%:\home
+set Home=%Disk%:\home
+REM 將後續的指令執行, 以 %Disk% 為主
+%Disk%:
+REM 設定 PYTHONPATH
+set PYTHONPATH=%Disk%:\Miniconda3
+set path1=%PATH%;%Disk%:\Miniconda3;%Disk%:\Miniconda3\Scripts;
+set path2=%Disk%:\apps\Git\bin;
+path=%path1%;%path2%;
+REM 啟動  SciTE
+start /MIN %Disk%:\SciTE\SciTE.exe
+REM 取 IPV4 IP address
+for /f "delims=[] tokens=2" %%a in ('ping -4 %computername% -n 1 ^| findstr "["') do (set thisip=%%a)
+REM echo %thisip%
+REM 取 IPV6 IP address
+REM for /f "delims=[] tokens=2" %%a in ('ping %computername% -n 1 ^| findstr "["') do (set thisip=%%a)
+REM echo %thisip%
+REM 啟動 Jupyter
+cd notebook
+start %Disk%:\Miniconda3\python.exe "%Disk%:\Miniconda3\Scripts\ipython3-script.py" notebook --ip=%thisip% --certfile=%Disk%:\home\ssl_cert.pem --profile=nbserver
+cd ..
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+python.exe %Disk%:\apps\launchLeo.py
+Exit
+</pre>
+
+<p>stop.bat 內容:</p>
+<pre class="brush: jscript">
+
+@echo off
+set Disk=y
+REM 關閉 SciTE
+taskkill /IM SciTE.exe /F
+REM 關閉 python
+taskkill /IM python.exe /F
+REM 清除資料
+path=%PATH%;
+REM del /Q /F  V:\tmp\*.*
+REM 終止虛擬硬碟與目錄的對應
+subst %Disk%: /D
+REM 關閉 cmd 指令視窗
+taskkill /IM cmd.exe /F
+EXIT
+</pre>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -319,54 +426,69 @@ CADLab 手冊 (虎尾科大MDE)            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="../template-qi-dong-dian-nao-fu-zhu-ji-jie-she-ji-shou-ce-bian-ji.html">
-                            template-啟動電腦輔助機械設計手冊編輯
+                        <a href="./python-xue-xi-shou-ce-yi.html">
+                            Python 學習手冊 (一)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../user1-ce-shi-content-mu-lu-xia-de-md-dang-an-zhuan-huan.html">
-                            user1-測試 content 目錄下的 md 檔案轉換
+                        <a href="./c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html">
+                            C 程式語言的指標與陣列導引 (中文翻譯)
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin.html">
+                            C 程式語言的指標與陣列導引
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./flask-dao-yin-yi.html">
+                            Flask 導引 (一)
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./cherrypy-shi-yong-shou-ce.html">
+                            Cherrypy 使用手冊
                         </a>
                     </li>
                 </ul>
             </li>
 
-            <li class="list-group-item"><a href="../categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+            <li class="list-group-item"><a href="./categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
                 <ul class="list-group" id="categories">
                     <li class="list-group-item">
-                        <a href="../category/c.html">
+                        <a href="./category/c.html">
                             <i class="fa fa-folder-open fa-lg"></i> C
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../category/cherrypy.html">
+                        <a href="./category/cherrypy.html">
                             <i class="fa fa-folder-open fa-lg"></i> Cherrypy
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../category/flask.html">
+                        <a href="./category/flask.html">
                             <i class="fa fa-folder-open fa-lg"></i> Flask
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../category/misc.html">
+                        <a href="./category/misc.html">
                             <i class="fa fa-folder-open fa-lg"></i> MISC
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../category/python.html">
+                        <a href="./category/python.html">
                             <i class="fa fa-folder-open fa-lg"></i> Python
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../category/raspberrypi.html">
+                        <a href="./category/raspberrypi.html">
                             <i class="fa fa-folder-open fa-lg"></i> RaspberryPi
                         </a>
                     </li>
                 </ul>
             </li>
 
-            <li class="list-group-item"><a href="../tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+            <li class="list-group-item"><a href="./tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group list-inline tagcloud" id="tags">
                 </ul>
             </li>
@@ -412,13 +534,13 @@ CADLab 手冊 (虎尾科大MDE)            </a>
       </div>
    </div>
 </footer>
-<script src="../theme/js/jquery.min.js"></script>
+<script src="./theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../theme/js/bootstrap.min.js"></script>
+<script src="./theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="../theme/js/respond.min.js"></script>
+<script src="./theme/js/respond.min.js"></script>
 
 
 </body>

@@ -48,6 +48,7 @@ g.es("admin pelican 執行完畢")
 <t tx="amd.20160329174131.1"></t>
 <t tx="amd.20160329174139.1">@language md
 Title: user1-測試 content 目錄下的 md 檔案轉換
+Date: 2016-03-29 11:00
 Category: MISC
 Tags: CADLAB, Ｍanual, MCAD
 Author: kmol
